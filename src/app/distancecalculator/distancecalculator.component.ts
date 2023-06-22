@@ -125,7 +125,7 @@ export class DistancecalculatorComponent {
 
   sampleDownload() {
   const filename = 'Sample.xlsx'; // replace with the name of your Excel file
-  const filePath = '/assets/Sample.xlsx'; // replace with the path to your Excel file
+  const filePath = '/assets/SampleBook3.xlsx'; // replace with the path to your Excel file
   const fileType = 'application/vnd.ms-excel'; // replace with the MIME type of your Excel file
 
   // initiate file download using FileSaver.js
