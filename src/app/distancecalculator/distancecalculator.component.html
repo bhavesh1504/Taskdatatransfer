@@ -48,12 +48,14 @@
         <br>
         <br> -->
         
-            <input type="file" #fileInput (change)="onFileSelected($event)" accept=".xlsx">
+            <input type="file" class="form-control" #fileInput (change)="onFileSelected($event)" accept=".xlsx">
             <button *ngIf="showRemove && selectedFile" class="btn btn-link" (click)="removeFile()">Remove</button>
         </div>
-        <br>
-        <button class="btn btn-success" [disabled]="downloadButton" (click)="downloadExcel()">Download Excel</button>
+        
     </div>
+</div>
+<div class="upside">
+    <button class="btn btn-success" [disabled]="downloadButton" (click)="downloadExcel()">Download Excel</button>
 </div>
 
 
