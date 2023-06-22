@@ -1,0 +1,61 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    padding: 0;
+}
+
+.center {
+    justify-content: center;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #0c0998 !important;
+}
+
+.navbar-brand {
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.align 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.center-div {
+    text-align: center;
+}
+
+/* .inputs {
+    width: 4rem;
+    height: 1.5rem;
+} */
+
+
+.container {
+    position: relative;
+  }
+  
+.sample-download {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.size {
+    padding: 20px;
+}

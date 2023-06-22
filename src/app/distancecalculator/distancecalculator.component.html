@@ -1,0 +1,67 @@
+<!--Header-->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+                <i class="bi bi-compass"></i>
+            Distance Calculator
+        </a>
+    </div>
+</nav>
+<!--Body-->
+<div class="container">
+    <button class="btn btn-primary sample-download" (click)="sampleDownload()">Sample Download</button>
+  </div>
+<div>
+<div class="align">
+    <div class="center-div">
+        <!-- <form [formGroup]="distanceForm">
+            <label for="lat1">Latitude 1:&nbsp;</label>
+            <input type="number" class="inputs" id="lat1" formControlName="lat1" required>
+            &nbsp;
+            <label for="long1">Longitude 1:&nbsp;</label>
+            <input type="number" class="inputs" id="long1" formControlName="long1" required>
+            &nbsp;
+            <label for="lat2">Latitude 2:&nbsp;</label>
+            <input type="number" class="inputs" id="lat2" formControlName="lat2" required>
+            &nbsp;
+            <label for="long2">Longitude 2:&nbsp;</label>
+            <input type="number" class="inputs" id="long2" formControlName="long2" required>
+            <br>
+            <div>
+                <input type="radio" id="nw" value="nw" formControlName="direction" required>
+                <label for="nw">NW</label>
+                &nbsp;
+                <input type="radio" id="ne" value="ne" formControlName="direction" required>
+                <label for="ne">NE</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!distanceForm.valid" (click)="calculateDistance()">Calculate
+                Distance</button>&nbsp;
+            <button type="submit" class="btn btn-primary" [disabled]="!distanceForm.valid" (click)="Reset()">Reset</button>
+                <br>
+                <br>
+        </form> -->
+       
+        <!-- <div *ngIf="distance">
+            <h3>Calculated Distance: {{ distance }} km</h3>
+        </div>
+        <br>
+        <br> -->
+        
+            <input type="file" #fileInput (change)="onFileSelected($event)" accept=".xlsx">
+            <button *ngIf="showRemove && selectedFile" class="btn btn-link" (click)="removeFile()">Remove</button>
+        </div>
+        <br>
+        <button class="btn btn-success" [disabled]="downloadButton" (click)="downloadExcel()">Download Excel</button>
+    </div>
+</div>
+
+
+<!--Footer-->
+<footer>
+    <nav class="navbar bg-body-tertiary size">
+        <!-- <div class="container-fluid d-flex center">
+            <a class="navbar-brand">All CopyRight Reserved © 2023</a>
+        </div> -->
+    </nav>
+</footer>

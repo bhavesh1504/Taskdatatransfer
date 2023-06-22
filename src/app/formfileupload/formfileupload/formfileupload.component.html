@@ -1,0 +1,36 @@
+<!-- <div class="align">
+    <div class="center-div">
+        <form [formGroup]="contactForm">
+            <div>
+                <label>Name:</label>&nbsp;
+                <input type="text" class="inputs" formControlName="name" placeholder="Enter Name" />
+                <span class="text-danger" *ngIf="contactForm.controls['name'].errors && contactForm.controls['name'].touched">
+                    Name Required
+                </span><br>
+            </div>
+            <br>
+            <div>
+                <label>Mobile No.:</label>&nbsp;
+                <input type="text" class="inputs" formControlName="mobile" placeholder="Enter Mobile-No." />
+                <span class="text-danger" *ngIf="contactForm.controls['mobile'].errors && contactForm.controls['mobile'].errors['pattern']">
+                    Mobile-No Required (10-digit OTP)
+                </span><br>
+            </div>
+            <br>
+            <div>
+                <label>Document-Upload:</label>&nbsp;
+                <input type="file" id="document" class="inputs" formControlName="document" accept=".png, .jpg, .jpeg, .gif, .pdf"
+                    (change)="onFileSelected($event)" multiple/>
+                    <span class="text-danger" *ngIf="contactForm.controls['document'].errors && contactForm.controls['document'].touched">
+                        Document Required
+                    </span><br>
+            </div>
+            <ng-container *ngFor="let file of getSelectedFileURLs()">
+                <img [src]="file" alt="Selected Image" class="small-image">
+              </ng-container>
+            <br>
+            <br>
+            <button class="btn btn-primary" (click)="sendOtp()" [disabled]="contactForm.invalid">Submit</button>
+        </form>
+    </div>
+</div> -->

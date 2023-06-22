@@ -1,0 +1,26 @@
+/* .align 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+.center-div {
+    text-align: center;
+}
+
+.inputs {
+    width: 15rem;
+    height: 2.5rem;
+  }
+  
+  .form button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .small-image {
+    max-width: 100px;
+    max-height: 100px;
+  } */

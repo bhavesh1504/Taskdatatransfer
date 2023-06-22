@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Taskdatatransfer';
+  title = 'DistanceCalculate';
+  data: any;
+
+  receiveData(data: string) {
+    this.data = data;
+  }
 }
