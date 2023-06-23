@@ -18,6 +18,7 @@ export class DistancecalculatorComponent {
   selectedFile: File | undefined;
   selectedFileName: string | undefined;
   showRemove: boolean = false;
+  isUploading: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private toaster: ToastrService) {
     this.distanceForm = this.formBuilder.group({
@@ -78,9 +79,11 @@ export class DistancecalculatorComponent {
     if(file){
       this.downloadButton = false;
       this.showRemove = true;
+      this.isUploading = true;
     }
     setTimeout(() => {
       this.toaster.success('File Uploaded Successfully')
+      this.isUploading = false;
     }, 100);
   }
 

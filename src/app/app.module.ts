@@ -14,6 +14,7 @@ import { ToastrModule, ToastrService, provideToastr } from 'ngx-toastr';
 import { FormfileuploadComponent } from './formfileupload/formfileupload/formfileupload.component';
 import { DistancecalculatorComponent } from './distancecalculator/distancecalculator.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { DistancecalculatorComponent } from './distancecalculator/distancecalcul
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [DataService,ToastrService,provideToastr({
     timeOut: 2000,
