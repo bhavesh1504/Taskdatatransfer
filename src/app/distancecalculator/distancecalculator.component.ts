@@ -105,24 +105,28 @@ export class DistancecalculatorComponent {
         const lat2 = parseFloat(row[3]);
         const long2 = parseFloat(row[4]);
   
-        const distance = this.haversineDistance(lat1, long1, lat2, long2);
-        row[5] = Math.round(distance * 100) / 100; // Round the distance value to 2 decimal places
+        if (isNaN(lat1) || isNaN(long1) || isNaN(lat2) || isNaN(long2)) {
+          row[5] = 0; // Set the distance column to blank if any of the values are not valid numbers
+        } else {
+          const distance = this.haversineDistance(lat1, long1, lat2, long2);
+          row[5] = Math.round(distance * 100) / 100; // Round the distance value to 2 decimal places
+        }
         row.splice(6, 1); // Remove the direction column from the row
       }
     };
     fileReader.readAsArrayBuffer(file);
   }
-  
-  
-  
+    
   downloadExcel() {
+    this.isUploading = true;
     const worksheet = XLSX.utils.aoa_to_sheet(this.excelData);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     this.saveAsExcelFile(excelBuffer, 'Calculated Distance');
     setTimeout(() => {
-      this.toaster.success('File Downloaded Successfully')
+      this.toaster.success('File Downloaded Successfully');
+      this.isUploading = false;
     }, 100);
   }
 
@@ -160,7 +164,7 @@ export class DistancecalculatorComponent {
       fileInput.value = '';
     }
     this.downloadButton = true;
-    this.toaster.success('File Removed successfully');
+    this.toaster.success('File Removed Successfully');
   }
 
 }
