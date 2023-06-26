@@ -19,6 +19,7 @@ export class DistancecalculatorComponent {
   selectedFileName: string | undefined;
   showRemove: boolean = false;
   isUploading: boolean = false;
+  isDarkMode = false;
 
   constructor(private formBuilder: FormBuilder, private toaster: ToastrService) {
     this.distanceForm = this.formBuilder.group({
@@ -165,6 +166,10 @@ export class DistancecalculatorComponent {
     }
     this.downloadButton = true;
     this.toaster.success('File Removed Successfully');
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
   }
 
 }
